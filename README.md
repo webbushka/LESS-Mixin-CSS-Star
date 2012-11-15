@@ -2,6 +2,8 @@ LESS Mixin For A CSS Star
 ===================
 
 A customizable LESS mixin to create a pure CSS star
+Demo: [http://codepen.io/webbushka/pen/hezba](http://codepen.io/webbushka/pen/hezba)
+Git: [https://github.com/webbushka/LESS-Mixin-CSS-Star](https://github.com/webbushka/LESS-Mixin-CSS-Star)
 
 Usage
 -----
@@ -18,3 +20,8 @@ Example
 Credit
 ------
 [Kit MacAllister](http://kitmacallister.com/2011/css-only-5-point-star/) for the original CSS star shape.
+
+<br /><br />
+Copyright 2012 (c), AJ Webb [https://github.com/webbushka/](https://github.com/webbushka/)   
+Licensed under the 
+[MIT](https://raw.github.com/webbushka/LESS-Mixin-CSS-Star/master/MIT-LICENSE.txt)
