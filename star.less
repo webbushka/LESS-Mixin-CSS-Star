@@ -3,77 +3,75 @@
 //
 // Usage
 //
-// .star(size, color, rotation);
+// .star(size, units, color, rotation);
 //
 //
 // Where
 //
 //  *Size is the size of the star
+//	*Units is the units of measurement for the size (e.g. px, rem, em)
 //  *Color is the color of the star, (e.g. #000, red or rgba(0,0,0,0.5))
 //  *Rotation is the rotation of the star 
 //
 //
 // Example
 //
-// .star(200, #f4f4f4, -15);
+// .star(200, em, #f4f4f4, -15);
 //
 //
 // Credit to  Kit MacAllister for the Star Shape CSS <http://kitmacallister.com/2011/css-only-5-point-star/>
 //
 //
 
-.star(@starSize: 100, @starColor: red, @starRotation: 0){
+.star(@starSize: 1, @units: em, @starColor: red, @starRotation: 0){
    // to make the star be right side up at 0 we add 35 to the rotation.
    @realStarRotation: @starRotation + 35;
+   //sizing variables to allow custom units
+   @star-105: @starSize * -1.05;
+   @star80: @starSize * 0.8;
+   @star70: @starSize * 0.7;
+   @star-65: @starSize * -0.65;
+   @star60: @starSize * 0.6;
+   @star-45: @starSize * -0.45;
+   @star30: @starSize * 0.3;
+   @star3: @starSize * 0.03;
 
-   margin: @starSize * .5px 0;
+   margin: ~"@{star60}@{units}" 0;
    display: block;
    color: @starColor;
    width: 0px;
    height: 0px;
-   border-right: @starSize * 1px solid transparent;
-   border-bottom: @starSize * 0.7px  solid @starColor;
-   border-left: @starSize * 1px solid transparent;
+  border-right: ~"@{starSize}@{units}" solid transparent;
+   border-bottom: ~"@{star70}@{units}"  solid @starColor;
+   border-left: ~"@{starSize}@{units}" solid transparent;
    transform: rotate(~"@{realStarRotation}deg");
-   -webkit-transform: rotate(~"@{realStarRotation}deg");
-   -moz-transform: rotate(~"@{realStarRotation}deg");
-   -ms-transform: rotate(~"@{realStarRotation}deg");
-   -o-transform: rotate(~"@{realStarRotation}deg");
   
   &:before {
-   border-bottom: @starSize * 0.8px solid @starColor;
-   border-left: @starSize * 0.3px solid transparent;
-   border-right: @starSize * 0.3px solid transparent;
+   border-bottom: ~"@{star80}@{units}" solid @starColor;
+   border-left: ~"@{star30}@{units}" solid transparent;
+   border-right: ~"@{star30}@{units}" solid transparent;
    position: absolute;
    height: 0;
    width: 0;
-   top: @starSize * -0.45px;
-   left: @starSize * -0.65px;
+   top: ~"@{star-45}@{units}";
+   left: ~"@{star-65}@{units}";
    display: block;
    content: '';
    transform: rotate(-35deg);
-   -webkit-transform: rotate(-35deg);
-   -moz-transform: rotate(-35deg);
-   -ms-transform: rotate(-35deg);
-   -o-transform: rotate(-35deg);
   }
   
   &:after {
    position: absolute;
    display: block;
    color: red;
-   top: @starSize * 0.03px;
-   left: @starSize * -1.05px;
+   top: ~"@{star3}@{units}";
+   left: ~"@{star-105}@{units}";
    width: 0px;
    height: 0px;
-   border-right: @starSize * 1px solid transparent;
-   border-bottom: @starSize * 0.7px solid @starColor;
-   border-left: @starSize * 1px solid transparent;
+   border-right: ~"@{starSize}@{units}" solid transparent;
+   border-bottom: ~"@{star70}@{units}" solid @starColor;
+   border-left: ~"@{starSize}@{units}" solid transparent;
    transform: rotate(-70deg);
-   -webkit-transform: rotate(-70deg);
-   -moz-transform: rotate(-70deg);
-   -ms-transform: rotate(-70deg);
-   -o-transform: rotate(-70deg);
    content: '';
   }
 }
