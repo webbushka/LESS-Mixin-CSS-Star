@@ -35,6 +35,10 @@
    border-bottom: @starSize * 0.7px  solid @starColor;
    border-left: @starSize * 1px solid transparent;
    transform: rotate(~"@{realStarRotation}deg");
+   -webkit-transform: rotate(~"@{realStarRotation}deg");
+   -moz-transform: rotate(~"@{realStarRotation}deg");
+   -ms-transform: rotate(~"@{realStarRotation}deg");
+   -o-transform: rotate(~"@{realStarRotation}deg");
   
   &:before {
    border-bottom: @starSize * 0.8px solid @starColor;
@@ -48,6 +52,10 @@
    display: block;
    content: '';
    transform: rotate(-35deg);
+   -webkit-transform: rotate(-35deg);
+   -moz-transform: rotate(-35deg);
+   -ms-transform: rotate(-35deg);
+   -o-transform: rotate(-35deg);
   }
   
   &:after {
@@ -62,6 +70,10 @@
    border-bottom: @starSize * 0.7px solid @starColor;
    border-left: @starSize * 1px solid transparent;
    transform: rotate(-70deg);
+   -webkit-transform: rotate(-70deg);
+   -moz-transform: rotate(-70deg);
+   -ms-transform: rotate(-70deg);
+   -o-transform: rotate(-70deg);
    content: '';
   }
 }
