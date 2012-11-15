@@ -1,4 +1,4 @@
-LESS-Mixin-CSS-Star
+LESS Mixin For A CSS Star
 ===================
 
 A customizable LESS mixin to create a pure CSS star
