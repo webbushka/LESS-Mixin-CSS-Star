@@ -1,7 +1,7 @@
 LESS Mixin For A CSS Star
 ===================
-
 A customizable LESS mixin to create a pure CSS star
+
 Version: 0.1
 Requires: [LESS](http://lesscss.org)
 Demo: [http://codepen.io/webbushka/pen/hezba](http://codepen.io/webbushka/pen/hezba)
