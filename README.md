@@ -2,10 +2,10 @@ LESS Mixin For A CSS Star
 ===================
 A customizable LESS mixin to create a pure CSS star
 
-Version: 0.1
-Requires: [LESS](http://lesscss.org)
-Demo: [http://codepen.io/webbushka/pen/hezba](http://codepen.io/webbushka/pen/hezba)
-Git: [https://github.com/webbushka/LESS-Mixin-CSS-Star](https://github.com/webbushka/LESS-Mixin-CSS-Star)
+Version: 0.1	
+Requires: [LESS](http://lesscss.org)	
+Demo: [http://codepen.io/webbushka/pen/hezba](http://codepen.io/webbushka/pen/hezba)	
+Git: [https://github.com/webbushka/LESS-Mixin-CSS-Star](https://github.com/webbushka/LESS-Mixin-CSS-Star)	
 
 Usage
 -----
