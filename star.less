@@ -1,0 +1,67 @@
+// LESS Mixin for CSS Star
+//
+//
+// Usage
+//
+// .star(size, color, rotation);
+//
+//
+// Where
+//
+//  *Size is the size of the star
+//  *Color is the color of the star, (e.g. #000, red or rgba(0,0,0,0.5))
+//  *Rotation is the rotation of the star 
+//
+//
+// Example
+//
+// .star(200, #f4f4f4, -15);
+//
+//
+// Credit to  Kit MacAllister for the Star Shape CSS <http://kitmacallister.com/2011/css-only-5-point-star/>
+//
+//
+
+.star(@starSize: 100, @starColor: red, @starRotation: 0){
+   // to make the star be right side up at 0 we add 35 to the rotation.
+   @realStarRotation: @starRotation + 35;
+
+   margin: @starSize * .5px 0;
+   display: block;
+   color: @starColor;
+   width: 0px;
+   height: 0px;
+   border-right: @starSize * 1px solid transparent;
+   border-bottom: @starSize * 0.7px  solid @starColor;
+   border-left: @starSize * 1px solid transparent;
+   transform: rotate(~"@{realStarRotation}deg");
+  
+  &:before {
+   border-bottom: @starSize * 0.8px solid @starColor;
+   border-left: @starSize * 0.3px solid transparent;
+   border-right: @starSize * 0.3px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: @starSize * -0.45px;
+   left: @starSize * -0.65px;
+   display: block;
+   content: '';
+   transform: rotate(-35deg);
+  }
+  
+  &:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: @starSize * 0.03px;
+   left: @starSize * -1.05px;
+   width: 0px;
+   height: 0px;
+   border-right: @starSize * 1px solid transparent;
+   border-bottom: @starSize * 0.7px solid @starColor;
+   border-left: @starSize * 1px solid transparent;
+   transform: rotate(-70deg);
+   content: '';
+  }
+}
